@@ -106,13 +106,14 @@ Partial Class CalculMental
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.BackColor = System.Drawing.Color.Transparent
         Me.RadioButton4.Location = New System.Drawing.Point(252, 347)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(45, 17)
         Me.RadioButton4.TabIndex = 5
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "CE1"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.RadioButton4.UseVisualStyleBackColor = False
         '
         'RadioButton5
         '
@@ -129,13 +130,14 @@ Partial Class CalculMental
         'RadioButton6
         '
         Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.BackColor = System.Drawing.Color.Transparent
         Me.RadioButton6.Location = New System.Drawing.Point(467, 347)
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(47, 17)
         Me.RadioButton6.TabIndex = 7
         Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "CM2"
-        Me.RadioButton6.UseVisualStyleBackColor = True
+        Me.RadioButton6.UseVisualStyleBackColor = False
         '
         'ProgressBar1
         '
@@ -164,6 +166,7 @@ Partial Class CalculMental
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Location = New System.Drawing.Point(364, 74)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(13, 13)
@@ -173,6 +176,7 @@ Partial Class CalculMental
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(383, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 13)
@@ -182,6 +186,7 @@ Partial Class CalculMental
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Location = New System.Drawing.Point(402, 74)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(13, 13)
@@ -191,6 +196,7 @@ Partial Class CalculMental
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Location = New System.Drawing.Point(421, 74)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(13, 13)
@@ -200,6 +206,7 @@ Partial Class CalculMental
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Location = New System.Drawing.Point(440, 74)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(12, 13)
@@ -209,6 +216,7 @@ Partial Class CalculMental
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Location = New System.Drawing.Point(364, 101)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(13, 13)
@@ -218,6 +226,7 @@ Partial Class CalculMental
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Location = New System.Drawing.Point(383, 101)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(13, 13)
@@ -227,6 +236,7 @@ Partial Class CalculMental
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Location = New System.Drawing.Point(402, 101)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(13, 13)
@@ -236,6 +246,7 @@ Partial Class CalculMental
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Location = New System.Drawing.Point(421, 101)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(13, 13)
@@ -245,6 +256,7 @@ Partial Class CalculMental
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Location = New System.Drawing.Point(440, 101)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(12, 13)
@@ -254,6 +266,7 @@ Partial Class CalculMental
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Location = New System.Drawing.Point(364, 128)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(13, 13)
@@ -263,6 +276,7 @@ Partial Class CalculMental
         'Label12
         '
         Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Location = New System.Drawing.Point(383, 128)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(13, 13)
@@ -272,6 +286,7 @@ Partial Class CalculMental
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Location = New System.Drawing.Point(402, 128)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(13, 13)
@@ -281,6 +296,7 @@ Partial Class CalculMental
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Location = New System.Drawing.Point(421, 128)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(13, 13)
@@ -290,6 +306,7 @@ Partial Class CalculMental
         'Label15
         '
         Me.Label15.AutoSize = True
+        Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Location = New System.Drawing.Point(440, 128)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(12, 13)
@@ -299,6 +316,7 @@ Partial Class CalculMental
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
         Me.Label16.Location = New System.Drawing.Point(364, 152)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(13, 13)
@@ -308,6 +326,7 @@ Partial Class CalculMental
         'Label17
         '
         Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
         Me.Label17.Location = New System.Drawing.Point(383, 152)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(13, 13)
@@ -317,6 +336,7 @@ Partial Class CalculMental
         'Label18
         '
         Me.Label18.AutoSize = True
+        Me.Label18.BackColor = System.Drawing.Color.Transparent
         Me.Label18.Location = New System.Drawing.Point(402, 152)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(13, 13)
@@ -326,6 +346,7 @@ Partial Class CalculMental
         'Label19
         '
         Me.Label19.AutoSize = True
+        Me.Label19.BackColor = System.Drawing.Color.Transparent
         Me.Label19.Location = New System.Drawing.Point(421, 152)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(13, 13)
@@ -335,6 +356,7 @@ Partial Class CalculMental
         'Label20
         '
         Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
         Me.Label20.Location = New System.Drawing.Point(440, 152)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(12, 13)
@@ -344,6 +366,7 @@ Partial Class CalculMental
         'Label21
         '
         Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
         Me.Label21.Location = New System.Drawing.Point(364, 176)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(13, 13)
@@ -353,6 +376,7 @@ Partial Class CalculMental
         'Label22
         '
         Me.Label22.AutoSize = True
+        Me.Label22.BackColor = System.Drawing.Color.Transparent
         Me.Label22.Location = New System.Drawing.Point(383, 176)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(13, 13)
@@ -362,6 +386,7 @@ Partial Class CalculMental
         'Label23
         '
         Me.Label23.AutoSize = True
+        Me.Label23.BackColor = System.Drawing.Color.Transparent
         Me.Label23.Location = New System.Drawing.Point(402, 176)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(13, 13)
@@ -371,6 +396,7 @@ Partial Class CalculMental
         'Label24
         '
         Me.Label24.AutoSize = True
+        Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Location = New System.Drawing.Point(421, 176)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(13, 13)
@@ -380,6 +406,7 @@ Partial Class CalculMental
         'Label25
         '
         Me.Label25.AutoSize = True
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
         Me.Label25.Location = New System.Drawing.Point(440, 176)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(12, 13)
@@ -389,6 +416,7 @@ Partial Class CalculMental
         'Label26
         '
         Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.Transparent
         Me.Label26.Location = New System.Drawing.Point(364, 204)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(13, 13)
@@ -398,6 +426,7 @@ Partial Class CalculMental
         'Label27
         '
         Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
         Me.Label27.Location = New System.Drawing.Point(383, 204)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(13, 13)
@@ -407,6 +436,7 @@ Partial Class CalculMental
         'Label28
         '
         Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
         Me.Label28.Location = New System.Drawing.Point(402, 204)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(13, 13)
@@ -416,6 +446,7 @@ Partial Class CalculMental
         'Label29
         '
         Me.Label29.AutoSize = True
+        Me.Label29.BackColor = System.Drawing.Color.Transparent
         Me.Label29.Location = New System.Drawing.Point(421, 204)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(13, 13)
@@ -425,6 +456,7 @@ Partial Class CalculMental
         'Label30
         '
         Me.Label30.AutoSize = True
+        Me.Label30.BackColor = System.Drawing.Color.Transparent
         Me.Label30.Location = New System.Drawing.Point(440, 204)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(12, 13)
@@ -434,6 +466,7 @@ Partial Class CalculMental
         'Label31
         '
         Me.Label31.AutoSize = True
+        Me.Label31.BackColor = System.Drawing.Color.Transparent
         Me.Label31.Location = New System.Drawing.Point(364, 235)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(13, 13)
@@ -443,6 +476,7 @@ Partial Class CalculMental
         'Label32
         '
         Me.Label32.AutoSize = True
+        Me.Label32.BackColor = System.Drawing.Color.Transparent
         Me.Label32.Location = New System.Drawing.Point(383, 235)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(13, 13)
@@ -452,6 +486,7 @@ Partial Class CalculMental
         'Label33
         '
         Me.Label33.AutoSize = True
+        Me.Label33.BackColor = System.Drawing.Color.Transparent
         Me.Label33.Location = New System.Drawing.Point(402, 235)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(13, 13)
@@ -461,6 +496,7 @@ Partial Class CalculMental
         'Label34
         '
         Me.Label34.AutoSize = True
+        Me.Label34.BackColor = System.Drawing.Color.Transparent
         Me.Label34.Location = New System.Drawing.Point(421, 235)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(13, 13)
@@ -470,6 +506,7 @@ Partial Class CalculMental
         'Label35
         '
         Me.Label35.AutoSize = True
+        Me.Label35.BackColor = System.Drawing.Color.Transparent
         Me.Label35.Location = New System.Drawing.Point(440, 235)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(12, 13)
@@ -479,6 +516,7 @@ Partial Class CalculMental
         'Label36
         '
         Me.Label36.AutoSize = True
+        Me.Label36.BackColor = System.Drawing.Color.Transparent
         Me.Label36.Location = New System.Drawing.Point(364, 265)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(13, 13)
@@ -488,6 +526,7 @@ Partial Class CalculMental
         'Label37
         '
         Me.Label37.AutoSize = True
+        Me.Label37.BackColor = System.Drawing.Color.Transparent
         Me.Label37.Location = New System.Drawing.Point(383, 265)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(13, 13)
@@ -497,6 +536,7 @@ Partial Class CalculMental
         'Label38
         '
         Me.Label38.AutoSize = True
+        Me.Label38.BackColor = System.Drawing.Color.Transparent
         Me.Label38.Location = New System.Drawing.Point(402, 265)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(13, 13)
@@ -506,6 +546,7 @@ Partial Class CalculMental
         'Label39
         '
         Me.Label39.AutoSize = True
+        Me.Label39.BackColor = System.Drawing.Color.Transparent
         Me.Label39.Location = New System.Drawing.Point(421, 265)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(13, 13)
@@ -515,6 +556,7 @@ Partial Class CalculMental
         'Label40
         '
         Me.Label40.AutoSize = True
+        Me.Label40.BackColor = System.Drawing.Color.Transparent
         Me.Label40.Location = New System.Drawing.Point(440, 265)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(12, 13)
@@ -524,6 +566,7 @@ Partial Class CalculMental
         'Label41
         '
         Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.Color.Transparent
         Me.Label41.Location = New System.Drawing.Point(364, 292)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(13, 13)
@@ -533,6 +576,7 @@ Partial Class CalculMental
         'Label42
         '
         Me.Label42.AutoSize = True
+        Me.Label42.BackColor = System.Drawing.Color.Transparent
         Me.Label42.Location = New System.Drawing.Point(383, 292)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(13, 13)
@@ -542,6 +586,7 @@ Partial Class CalculMental
         'Label43
         '
         Me.Label43.AutoSize = True
+        Me.Label43.BackColor = System.Drawing.Color.Transparent
         Me.Label43.Location = New System.Drawing.Point(402, 292)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(13, 13)
@@ -551,6 +596,7 @@ Partial Class CalculMental
         'Label44
         '
         Me.Label44.AutoSize = True
+        Me.Label44.BackColor = System.Drawing.Color.Transparent
         Me.Label44.Location = New System.Drawing.Point(421, 292)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(13, 13)
@@ -560,6 +606,7 @@ Partial Class CalculMental
         'Label45
         '
         Me.Label45.AutoSize = True
+        Me.Label45.BackColor = System.Drawing.Color.Transparent
         Me.Label45.Location = New System.Drawing.Point(440, 292)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(12, 13)
@@ -569,6 +616,7 @@ Partial Class CalculMental
         'Label46
         '
         Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.Transparent
         Me.Label46.Location = New System.Drawing.Point(364, 322)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(13, 13)
@@ -578,6 +626,7 @@ Partial Class CalculMental
         'Label47
         '
         Me.Label47.AutoSize = True
+        Me.Label47.BackColor = System.Drawing.Color.Transparent
         Me.Label47.Location = New System.Drawing.Point(383, 322)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(13, 13)
@@ -587,6 +636,7 @@ Partial Class CalculMental
         'Label48
         '
         Me.Label48.AutoSize = True
+        Me.Label48.BackColor = System.Drawing.Color.Transparent
         Me.Label48.Location = New System.Drawing.Point(402, 322)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(13, 13)
@@ -596,6 +646,7 @@ Partial Class CalculMental
         'Label49
         '
         Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
         Me.Label49.Location = New System.Drawing.Point(421, 322)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(13, 13)
@@ -605,6 +656,7 @@ Partial Class CalculMental
         'Label50
         '
         Me.Label50.AutoSize = True
+        Me.Label50.BackColor = System.Drawing.Color.Transparent
         Me.Label50.Location = New System.Drawing.Point(440, 322)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(12, 13)

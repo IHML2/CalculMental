@@ -2,93 +2,92 @@
 
 
     Private Sub Button55_Click(sender As Object, e As EventArgs) Handles Button55.Click
-        Dim toppings As String = ""
-        If RadioButton4.Checked = True Then
-            toppings &= "CE1 "
-        End If
-        If RadioButton5.Checked = True Then
-            toppings &= "CE2-CM1 "
-        End If
-        If RadioButton6.Checked = True Then
-            toppings &= "CM2"
-        End If
-        If toppings <> "" Then
-            MsgBox("Tu es : " & toppings)
-        End If
+        If (e.KeyCode = Keys.Enter) Then
+            Dim toppings As String = ""
+            If RadioButton4.Checked = True Then
+                toppings &= "CE1 "
+            End If
+            If RadioButton5.Checked = True Then
+                toppings &= "CE2-CM1 "
+            End If
+            If RadioButton6.Checked = True Then
+                toppings &= "CM2"
+            End If
+            If toppings <> "" Then
+                MsgBox("Tu es : " & toppings)
+            End If
 
-        MsgBox("Ton nom est " & TextBox1.Text)
-        TextBox1.Visible = False
-        Label1.Visible = False
-        RadioButton4.Visible = False
-        RadioButton5.Visible = False
-        RadioButton6.Visible = False
-        Button55.Visible = False
+            MsgBox("Ton nom est " & TextBox1.Text)
+            TextBox1.Visible = False
+            Label1.Visible = False
+            RadioButton4.Visible = False
+            RadioButton5.Visible = False
+            RadioButton6.Visible = False
+            Button55.Visible = False
 
-        Label1.Visible = True
-        Label2.Visible = True
-        Label3.Visible = True
-        Label4.Visible = True
-        Label5.Visible = True
-        Label6.Visible = True
-        Label7.Visible = True
-        Label8.Visible = True
-        Label9.Visible = True
-        Label10.Visible = True
-        Label11.Visible = True
-        Label12.Visible = True
-        Label13.Visible = True
+            Label1.Visible = True
+            Label2.Visible = True
+            Label3.Visible = True
+            Label4.Visible = True
+            Label5.Visible = True
+            Label6.Visible = True
+            Label7.Visible = True
+            Label8.Visible = True
+            Label9.Visible = True
+            Label10.Visible = True
+            Label11.Visible = True
+            Label12.Visible = True
+            Label13.Visible = True
 
-        Label14.Visible = True
-        Label15.Visible = True
-        Label16.Visible = True
-        Label17.Visible = True
-        Label18.Visible = True
-        Label19.Visible = True
-        Label20.Visible = True
-        Label21.Visible = True
-        Label22.Visible = True
-        Label23.Visible = True
-        Label24.Visible = True
-        Label25.Visible = True
-        Label26.Visible = True
-        Label27.Visible = True
-        Label28.Visible = True
-        Label29.Visible = True
-        Label30.Visible = True
-        Label31.Visible = True
-        Label32.Visible = True
-        Label33.Visible = True
-        Label34.Visible = True
-        Label35.Visible = True
-        Label36.Visible = True
-        Label37.Visible = True
-        Label38.Visible = True
-        Label39.Visible = True
-        Label40.Visible = True
-        Label41.Visible = True
-        Label42.Visible = True
-        Label43.Visible = True
-        Label44.Visible = True
-        Label45.Visible = True
-        Label46.Visible = True
-        Label47.Visible = True
-        Label48.Visible = True
-        Label49.Visible = True
-        Label50.Visible = True
-        Button1.Visible = True
-
-
-        Timer1.Interval = 1800
-        Timer1.Enabled = True
-        Timer1.Start()
-        Timer2.Interval = 180000
-        Timer2.Enabled = True
-        Timer2.Start()
-        Timer3.Interval = 1000
-        Timer3.Enabled = True
-        Timer3.Start()
+            Label14.Visible = True
+            Label15.Visible = True
+            Label16.Visible = True
+            Label17.Visible = True
+            Label18.Visible = True
+            Label19.Visible = True
+            Label20.Visible = True
+            Label21.Visible = True
+            Label22.Visible = True
+            Label23.Visible = True
+            Label24.Visible = True
+            Label25.Visible = True
+            Label26.Visible = True
+            Label27.Visible = True
+            Label28.Visible = True
+            Label29.Visible = True
+            Label30.Visible = True
+            Label31.Visible = True
+            Label32.Visible = True
+            Label33.Visible = True
+            Label34.Visible = True
+            Label35.Visible = True
+            Label36.Visible = True
+            Label37.Visible = True
+            Label38.Visible = True
+            Label39.Visible = True
+            Label40.Visible = True
+            Label41.Visible = True
+            Label42.Visible = True
+            Label43.Visible = True
+            Label44.Visible = True
+            Label45.Visible = True
+            Label46.Visible = True
+            Label47.Visible = True
+            Label48.Visible = True
+            Label49.Visible = True
+            Label50.Visible = True
+            Button1.Visible = True
 
 
+            Timer1.Interval = 1800
+            Timer1.Enabled = True
+            Timer1.Start()
+            Timer2.Interval = 180000
+            Timer2.Enabled = True
+            Timer2.Start()
+            Timer3.Interval = 1000
+            Timer3.Enabled = True
+            Timer3.Start()
     End Sub
 
     Dim i As Integer = 0
@@ -515,7 +514,16 @@
 
     End Sub
     Dim Seconds As Integer = 0
+
+    Private Sub TextBox1_TextChanged_1(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown
+
+    End Sub
+
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
         Seconds += 1000
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) 
+
     End Sub
 End Class
