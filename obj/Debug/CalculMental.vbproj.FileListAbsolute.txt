@@ -9,3 +9,7 @@ C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculM
 C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.xml
 C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.pdb
 C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.CalculMental.resources
+C:\Users\Geoffrey\Documents\GitHub\CalculMental\bin\Debug\CalculMental.exe.config
+C:\Users\Geoffrey\Documents\GitHub\CalculMental\obj\Debug\CalculMental.exe
+C:\Users\Geoffrey\Documents\GitHub\CalculMental\obj\Debug\CalculMental.xml
+C:\Users\Geoffrey\Documents\GitHub\CalculMental\obj\Debug\CalculMental.pdb
