@@ -1,0 +1,11 @@
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\bin\Debug\CalculMental.exe.config
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\bin\Debug\CalculMental.exe
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\bin\Debug\CalculMental.pdb
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\bin\Debug\CalculMental.xml
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.vbprojResolveAssemblyReference.cache
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.Resources.resources
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.vbproj.GenerateResource.Cache
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.exe
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.xml
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.pdb
+C:\Users\Geoffrey\Documents\Visual Studio 2015\Projects\IHM\CalculMental\CalculMental\obj\Debug\CalculMental.CalculMental.resources
