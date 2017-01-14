@@ -27,9 +27,6 @@ Partial Class CalculMental
         Me.Button55 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
@@ -85,11 +82,18 @@ Partial Class CalculMental
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button55
         '
-        Me.Button55.Location = New System.Drawing.Point(358, 391)
+        Me.Button55.Location = New System.Drawing.Point(683, 494)
         Me.Button55.Name = "Button55"
         Me.Button55.Size = New System.Drawing.Size(75, 23)
         Me.Button55.TabIndex = 1
@@ -98,46 +102,10 @@ Partial Class CalculMental
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(524, 228)
+        Me.TextBox1.Location = New System.Drawing.Point(352, 197)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 2
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.BackColor = System.Drawing.Color.Transparent
-        Me.RadioButton4.Location = New System.Drawing.Point(252, 347)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(45, 17)
-        Me.RadioButton4.TabIndex = 5
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "CE1"
-        Me.RadioButton4.UseVisualStyleBackColor = False
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.BackColor = System.Drawing.Color.Transparent
-        Me.RadioButton5.Location = New System.Drawing.Point(358, 347)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(70, 17)
-        Me.RadioButton5.TabIndex = 6
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "CE2-CM1"
-        Me.RadioButton5.UseVisualStyleBackColor = False
-        '
-        'RadioButton6
-        '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.BackColor = System.Drawing.Color.Transparent
-        Me.RadioButton6.Location = New System.Drawing.Point(467, 347)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(47, 17)
-        Me.RadioButton6.TabIndex = 7
-        Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "CM2"
-        Me.RadioButton6.UseVisualStyleBackColor = False
         '
         'ProgressBar1
         '
@@ -666,6 +634,43 @@ Partial Class CalculMental
         'Timer3
         '
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(599, 272)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(159, 63)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 51
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(352, 272)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(159, 63)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 52
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(105, 272)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(159, 63)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 53
+        Me.PictureBox3.TabStop = False
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(480, 427)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 54
+        '
         'CalculMental
         '
         Me.AllowDrop = True
@@ -674,10 +679,11 @@ Partial Class CalculMental
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(833, 567)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ProgressBar1)
-        Me.Controls.Add(Me.RadioButton6)
-        Me.Controls.Add(Me.RadioButton5)
-        Me.Controls.Add(Me.RadioButton4)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button55)
         Me.Controls.Add(Me.Label50)
@@ -733,6 +739,9 @@ Partial Class CalculMental
         Me.Controls.Add(Me.Button1)
         Me.Name = "CalculMental"
         Me.Text = "Calcul Mental"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -740,9 +749,6 @@ Partial Class CalculMental
     Friend WithEvents Button55 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents RadioButton6 As RadioButton
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
@@ -798,4 +804,8 @@ Partial Class CalculMental
     Friend WithEvents Label49 As System.Windows.Forms.Label
     Friend WithEvents Label50 As System.Windows.Forms.Label
     Friend WithEvents Timer3 As Timer
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents TextBox2 As TextBox
 End Class
