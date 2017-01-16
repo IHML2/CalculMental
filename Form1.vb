@@ -1982,6 +1982,7 @@
                         b = rndnbr
                         alt = a Mod b
                     End While
+
                     Label2.Text = "/"
                     x = a / b
                 End If
