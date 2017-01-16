@@ -1031,14 +1031,22 @@
         End If
 
         If niveau = 2 Then
-            TextBox2.Enabled = True
             Dim random As New Random(), rndnbr As Integer
             Dim a As Integer
             Dim b As Integer
             Dim c As Integer
             Dim alt As Integer
             Dim x As Integer
+
+
+            TextBox2.Enabled = True
+
             If i = 0 Then
+
+
+                Label5.ForeColor = Color.Black
+
+
                 Randomize()
                 rndnbr = random.Next(0, 1000)
                 a = rndnbr
@@ -1131,31 +1139,53 @@
                 End If
 
 
-                If i = 1 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
+
+
+
+
+            End If
+
+
+            If i = 1 Then
+
+
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label7.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label7.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
                     a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label7.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label7.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
+                    x = a * b
+                    Label7.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
                         a = rndnbr
-                        x = a * b
-                        Label7.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
                         rndnbr = random.Next(1, 3)
                         alt = rndnbr
                         If alt = 1 Then
@@ -1164,772 +1194,774 @@
                             b = 5
                         Else
                             b = 10
+                            alt = a Mod b
                         End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label7.Text = "/"
-                        x = a / b
-                    End If
-                    Label6.Visible = True
-                    Label7.Visible = True
-                    Label8.Visible = True
-                    Label9.Visible = True
-                    Label10.Visible = True
-
-                    Label6.Text = a
-                    Label8.Text = b
-                    Label9.Text = "="
-                    Label10.Text = "?"
-
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
                     End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label10.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label10.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label10.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label10.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
+                    Label7.Text = "/"
+                    x = a / b
                 End If
-                If i = 2 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 8)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label12.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label12.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label12.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label12.Text = "/"
-                        x = a / b
-                    End If
-                    Label11.Visible = True
-                    Label12.Visible = True
-                    Label13.Visible = True
+                Label6.Visible = True
+                Label7.Visible = True
+                Label8.Visible = True
+                Label9.Visible = True
+                Label10.Visible = True
 
-                    Label14.Visible = True
-                    Label15.Visible = True
-                    Label11.Text = a
-                    Label13.Text = b
-                    Label14.Text = "="
-                    Label15.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
+                Label6.Text = a
+                Label8.Text = b
+                Label9.Text = "="
+                Label10.Text = "?"
 
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label15.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label15.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label15.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label15.Text = x
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
 
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-                If i = 3 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label17.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label17.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label17.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label17.Text = "/"
-                        x = a / b
-                    End If
-                    Label16.Visible = True
-                    Label17.Visible = True
-                    Label18.Visible = True
-                    Label19.Visible = True
-                    Label20.Visible = True
-                    Label16.Text = a
-                    Label18.Text = b
-                    Label19.Text = "="
-                    Label20.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label20.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label20.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label20.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label20.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-
-                If i = 4 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label22.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label22.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label22.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label22.Text = "/"
-                        x = a / b
-                    End If
-                    Label21.Visible = True
-                    Label22.Visible = True
-                    Label23.Visible = True
-                    Label24.Visible = True
-                    Label25.Visible = True
-                    Label21.Text = a
-                    Label23.Text = b
-                    Label24.Text = "="
-                    Label25.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label25.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label25.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label25.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label25.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-
-                If i = 5 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label27.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label27.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label27.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label27.Text = "/"
-                        x = a / b
-                    End If
-                    Label26.Visible = True
-                    Label27.Visible = True
-                    Label28.Visible = True
-                    Label29.Visible = True
-                    Label30.Visible = True
-                    Label26.Text = a
-                    Label28.Text = b
-                    Label29.Text = "="
-                    Label30.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label30.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label30.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label30.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label30.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-                If i = 6 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label32.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label32.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label32.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label32.Text = "/"
-                        x = a / b
-                    End If
-                    Label31.Visible = True
-                    Label32.Visible = True
-                    Label33.Visible = True
-                    Label34.Visible = True
-                    Label35.Visible = True
-                    Label31.Text = a
-                    Label33.Text = b
-                    Label34.Text = "="
-                    Label35.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label35.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label35.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label35.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label35.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-                If i = 7 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label37.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label37.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label37.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label37.Text = "/"
-                        x = a / b
-                    End If
-                    Label36.Visible = True
-                    Label37.Visible = True
-                    Label38.Visible = True
-                    Label39.Visible = True
-                    Label40.Visible = True
-                    Label36.Text = a
-                    Label38.Text = b
-                    Label39.Text = "="
-                    Label40.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label40.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label40.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label40.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label40.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-                If i = 8 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label42.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label42.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label42.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label42.Text = "/"
-                        x = a / b
-                    End If
-                    Label41.Visible = True
-                    Label42.Visible = True
-                    Label43.Visible = True
-                    Label44.Visible = True
-                    Label45.Visible = True
-                    Label41.Text = a
-                    Label43.Text = b
-                    Label44.Text = "="
-                    Label45.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label45.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label45.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label45.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label45.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                End If
-                If i = 9 Then
-                    Randomize()
-                    rndnbr = random.Next(0, 100)
-                    a = rndnbr
-                    rndnbr = random.Next(0, 100)
-                    b = rndnbr
-                    rndnbr = random.Next(0, 11)
-                    c = rndnbr
-                    If c = 0 Or c = 3 Or c = 6 Then
-                        x = a + b
-                        Label47.Text = "+"
-                    ElseIf c = 1 Or c = 4 Or c = 7 Then
-                        If a - b < 0 Then
-                            alt = a
-                            a = b
-                            b = alt
-                        End If
-                        x = a - b
-                        Label47.Text = "-"
-                    ElseIf c = 2 Or c = 5 Or c = 8 Then
-                        rndnbr = random.Next(2, 10)
-                        a = rndnbr
-                        x = a * b
-                        Label47.Text = "*"
-                    ElseIf c = 9 Or c = 10 Or c = 11 Then
-                        rndnbr = random.Next(1, 3)
-                        alt = rndnbr
-                        If alt = 1 Then
-                            b = 2
-                        ElseIf alt = 2 Then
-                            b = 5
-                        Else
-                            b = 10
-                        End If
-                        alt = a Mod b
-                        While alt <> 0
-                            rndnbr = random.Next(0, 100)
-                            a = rndnbr
-                            rndnbr = random.Next(1, 3)
-                            alt = rndnbr
-                            If alt = 1 Then
-                                b = 2
-                            ElseIf alt = 2 Then
-                                b = 5
-                            Else
-                                b = 10
-                                alt = a Mod b
-                            End If
-                        End While
-                        Label47.Text = "/"
-                        x = a / b
-                    End If
-                    Label46.Visible = True
-                    Label47.Visible = True
-                    Label48.Visible = True
-                    Label49.Visible = True
-                    Label50.Visible = True
-                    Label46.Text = a
-                    Label48.Text = b
-                    Label49.Text = "="
-                    Label50.Text = "?"
-                    flag = 0
-                    While flag = 0
-                        Application.DoEvents()
-
-                    End While
-                    i = i + 1
-                    If resultatfinal = x Then
-                        Label50.ForeColor = Color.Green
-                        PictureBox9.Visible = True
-                        PictureBox10.Visible = False
-                        Label50.Text = x
-                        compteur = compteur + 1
-                        Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
-                    Else
-                        Label50.ForeColor = Color.Red
-                        PictureBox9.Visible = False
-                        PictureBox10.Visible = True
-                        Label50.Text = x
-
-                        Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
-
-
-                    End If
-                    Dim Test As Integer
-
-                    TextBox2.Enabled = False
-
-                    Timer2.Stop()
-                    Test = Timer2.Interval - Seconds
-                    Test = Test / 1000
-
-
-
-
-                    Timer1.Stop()
-                    Timer2.Stop()
-                    Timer3.Stop()
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label10.ForeColor = Color.Green
+                    PictureBox9.Visible = True
                     PictureBox10.Visible = False
+                    Label10.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label10.ForeColor = Color.Red
                     PictureBox9.Visible = False
-                    If compteur < 5 Then
-                        Label51.Text = "Dommage, tu peux retenter ta chance !"
-                    End If
+                    PictureBox10.Visible = True
+                    Label10.Text = x
 
-                    If compteur > 4 And compteur <= 9 Then
-                        Label51.Text = "Bravo, mais tu peux encore t'améliorer !"
-                    End If
-                    If compteur = 10 Then
-                        Label51.Text = "Bravo, tu as tout réussi !"
-                    End If
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
                 End If
-                    End If
 
+            End If
+
+
+            If i = 2 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 8)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label12.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
                     End If
+                    x = a - b
+                    Label12.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label12.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label12.Text = "/"
+                    x = a / b
+                End If
+                Label11.Visible = True
+                Label12.Visible = True
+                Label13.Visible = True
+
+                Label14.Visible = True
+                Label15.Visible = True
+                Label11.Text = a
+                Label13.Text = b
+                Label14.Text = "="
+                Label15.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label15.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label15.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label15.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label15.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+
+            End If
+
+
+            If i = 3 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label17.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label17.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label17.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label17.Text = "/"
+                    x = a / b
+                End If
+                Label16.Visible = True
+                Label17.Visible = True
+                Label18.Visible = True
+                Label19.Visible = True
+                Label20.Visible = True
+                Label16.Text = a
+                Label18.Text = b
+                Label19.Text = "="
+                Label20.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label20.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label20.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label20.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label20.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+            End If
+
+
+            If i = 4 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label22.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label22.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label22.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label22.Text = "/"
+                    x = a / b
+                End If
+                Label21.Visible = True
+                Label22.Visible = True
+                Label23.Visible = True
+                Label24.Visible = True
+                Label25.Visible = True
+                Label21.Text = a
+                Label23.Text = b
+                Label24.Text = "="
+                Label25.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label25.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label25.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label25.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label25.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+
+            End If
+
+            If i = 5 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label27.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label27.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label27.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label27.Text = "/"
+                    x = a / b
+                End If
+                Label26.Visible = True
+                Label27.Visible = True
+                Label28.Visible = True
+                Label29.Visible = True
+                Label30.Visible = True
+                Label26.Text = a
+                Label28.Text = b
+                Label29.Text = "="
+                Label30.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label30.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label30.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label30.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label30.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+            End If
+
+            If i = 6 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label32.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label32.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label32.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label32.Text = "/"
+                    x = a / b
+                End If
+                Label31.Visible = True
+                Label32.Visible = True
+                Label33.Visible = True
+                Label34.Visible = True
+                Label35.Visible = True
+                Label31.Text = a
+                Label33.Text = b
+                Label34.Text = "="
+                Label35.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label35.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label35.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label35.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label35.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+
+            End If
+
+
+            If i = 7 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label37.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label37.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label37.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label37.Text = "/"
+                    x = a / b
+                End If
+                Label36.Visible = True
+                Label37.Visible = True
+                Label38.Visible = True
+                Label39.Visible = True
+                Label40.Visible = True
+                Label36.Text = a
+                Label38.Text = b
+                Label39.Text = "="
+                Label40.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label40.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label40.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label40.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label40.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+            End If
+
+
+            If i = 8 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label42.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label42.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label42.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label42.Text = "/"
+                    x = a / b
+                End If
+                Label41.Visible = True
+                Label42.Visible = True
+                Label43.Visible = True
+                Label44.Visible = True
+                Label45.Visible = True
+                Label41.Text = a
+                Label43.Text = b
+                Label44.Text = "="
+                Label45.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label45.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label45.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label45.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label45.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+            End If
+
+
+            If i = 9 Then
+                Randomize()
+                rndnbr = random.Next(0, 100)
+                a = rndnbr
+                rndnbr = random.Next(0, 100)
+                b = rndnbr
+                rndnbr = random.Next(0, 11)
+                c = rndnbr
+                If c = 0 Or c = 3 Or c = 6 Then
+                    x = a + b
+                    Label47.Text = "+"
+                ElseIf c = 1 Or c = 4 Or c = 7 Then
+                    If a - b < 0 Then
+                        alt = a
+                        a = b
+                        b = alt
+                    End If
+                    x = a - b
+                    Label47.Text = "-"
+                ElseIf c = 2 Or c = 5 Or c = 8 Then
+                    rndnbr = random.Next(2, 10)
+                    a = rndnbr
+                    x = a * b
+                    Label47.Text = "*"
+                ElseIf c = 9 Or c = 10 Or c = 11 Then
+                    rndnbr = random.Next(1, 3)
+                    alt = rndnbr
+                    If alt = 1 Then
+                        b = 2
+                    ElseIf alt = 2 Then
+                        b = 5
+                    Else
+                        b = 10
+                    End If
+                    alt = a Mod b
+                    While alt <> 0
+                        rndnbr = random.Next(0, 100)
+                        a = rndnbr
+                        rndnbr = random.Next(1, 3)
+                        alt = rndnbr
+                        If alt = 1 Then
+                            b = 2
+                        ElseIf alt = 2 Then
+                            b = 5
+                        Else
+                            b = 10
+                            alt = a Mod b
+                        End If
+                    End While
+                    Label47.Text = "/"
+                    x = a / b
+                End If
+                Label46.Visible = True
+                Label47.Visible = True
+                Label48.Visible = True
+                Label49.Visible = True
+                Label50.Visible = True
+                Label46.Text = a
+                Label48.Text = b
+                Label49.Text = "="
+                Label50.Text = "?"
+                flag = 0
+                While flag = 0
+                    Application.DoEvents()
+
+                End While
+                i = i + 1
+                If resultatfinal = x Then
+                    Label50.ForeColor = Color.Green
+                    PictureBox9.Visible = True
+                    PictureBox10.Visible = False
+                    Label50.Text = x
+                    compteur = compteur + 1
+                    Label51.Text = "Bravo, tu as trouvé la bonne réponse !"
+                Else
+                    Label50.ForeColor = Color.Red
+                    PictureBox9.Visible = False
+                    PictureBox10.Visible = True
+                    Label50.Text = x
+
+                    Label51.Text = "Dommage, ce n'est pas la bonne réponse !"
+
+
+                End If
+                Dim Test As Integer
+
+                TextBox2.Enabled = False
+
+                Timer2.Stop()
+                Test = Timer2.Interval - Seconds
+                Test = Test / 1000
+
+
+
+
+                Timer1.Stop()
+                Timer2.Stop()
+                Timer3.Stop()
+                PictureBox10.Visible = False
+                PictureBox9.Visible = False
+                If compteur < 5 Then
+                    Label51.Text = "Dommage, tu peux retenter ta chance !"
+                End If
+
+                If compteur > 4 And compteur <= 9 Then
+                    Label51.Text = "Bravo, mais tu peux encore t'améliorer !"
+                End If
+                If compteur = 10 Then
+                    Label51.Text = "Bravo, tu as tout réussi !"
+                End If
+            End If
+
+        End If
 
 
 

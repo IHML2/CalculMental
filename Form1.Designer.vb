@@ -713,7 +713,7 @@ Partial Class CalculMental
         Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
         Me.PictureBox12.Location = New System.Drawing.Point(480, 280)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(297, 203)
+        Me.PictureBox12.Size = New System.Drawing.Size(297, 194)
         Me.PictureBox12.TabIndex = 64
         Me.PictureBox12.TabStop = False
         Me.PictureBox12.Visible = False
