@@ -26,7 +26,6 @@ Partial Class CalculMental
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CalculMental))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
@@ -92,6 +91,9 @@ Partial Class CalculMental
         Me.Label51 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Label52 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,6 +104,8 @@ Partial Class CalculMental
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -110,15 +114,6 @@ Partial Class CalculMental
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(124, 20)
         Me.TextBox1.TabIndex = 2
-        '
-        'ProgressBar1
-        '
-        Me.ProgressBar1.Location = New System.Drawing.Point(480, 372)
-        Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
-        Me.ProgressBar1.TabIndex = 8
-        Me.ProgressBar1.UseWaitCursor = True
-        Me.ProgressBar1.Value = 100
         '
         'Timer1
         '
@@ -130,7 +125,7 @@ Partial Class CalculMental
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(96, 140)
+        Me.Label1.Location = New System.Drawing.Point(80, 140)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 1
@@ -139,7 +134,7 @@ Partial Class CalculMental
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(115, 140)
+        Me.Label2.Location = New System.Drawing.Point(105, 140)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 2
@@ -148,7 +143,7 @@ Partial Class CalculMental
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(134, 140)
+        Me.Label3.Location = New System.Drawing.Point(132, 140)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(0, 13)
         Me.Label3.TabIndex = 3
@@ -175,7 +170,7 @@ Partial Class CalculMental
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(96, 167)
+        Me.Label6.Location = New System.Drawing.Point(80, 167)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(0, 13)
         Me.Label6.TabIndex = 6
@@ -184,7 +179,7 @@ Partial Class CalculMental
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(115, 167)
+        Me.Label7.Location = New System.Drawing.Point(105, 167)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(0, 13)
         Me.Label7.TabIndex = 7
@@ -193,7 +188,7 @@ Partial Class CalculMental
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(134, 167)
+        Me.Label8.Location = New System.Drawing.Point(132, 167)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(0, 13)
         Me.Label8.TabIndex = 8
@@ -220,7 +215,7 @@ Partial Class CalculMental
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(96, 194)
+        Me.Label11.Location = New System.Drawing.Point(80, 194)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(0, 13)
         Me.Label11.TabIndex = 11
@@ -229,7 +224,7 @@ Partial Class CalculMental
         '
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(115, 194)
+        Me.Label12.Location = New System.Drawing.Point(105, 194)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(0, 13)
         Me.Label12.TabIndex = 12
@@ -238,7 +233,7 @@ Partial Class CalculMental
         '
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(134, 194)
+        Me.Label13.Location = New System.Drawing.Point(132, 194)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(0, 13)
         Me.Label13.TabIndex = 13
@@ -265,7 +260,7 @@ Partial Class CalculMental
         '
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(96, 218)
+        Me.Label16.Location = New System.Drawing.Point(80, 218)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(0, 13)
         Me.Label16.TabIndex = 16
@@ -274,7 +269,7 @@ Partial Class CalculMental
         '
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(115, 218)
+        Me.Label17.Location = New System.Drawing.Point(105, 218)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(0, 13)
         Me.Label17.TabIndex = 17
@@ -283,7 +278,7 @@ Partial Class CalculMental
         '
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(134, 218)
+        Me.Label18.Location = New System.Drawing.Point(132, 218)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(0, 13)
         Me.Label18.TabIndex = 18
@@ -310,7 +305,7 @@ Partial Class CalculMental
         '
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(96, 242)
+        Me.Label21.Location = New System.Drawing.Point(80, 242)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(0, 13)
         Me.Label21.TabIndex = 21
@@ -319,7 +314,7 @@ Partial Class CalculMental
         '
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.Color.White
-        Me.Label22.Location = New System.Drawing.Point(115, 242)
+        Me.Label22.Location = New System.Drawing.Point(105, 242)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(0, 13)
         Me.Label22.TabIndex = 22
@@ -328,7 +323,7 @@ Partial Class CalculMental
         '
         Me.Label23.AutoSize = True
         Me.Label23.BackColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(134, 242)
+        Me.Label23.Location = New System.Drawing.Point(132, 242)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(0, 13)
         Me.Label23.TabIndex = 23
@@ -355,7 +350,7 @@ Partial Class CalculMental
         '
         Me.Label26.AutoSize = True
         Me.Label26.BackColor = System.Drawing.Color.White
-        Me.Label26.Location = New System.Drawing.Point(96, 270)
+        Me.Label26.Location = New System.Drawing.Point(80, 270)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(0, 13)
         Me.Label26.TabIndex = 26
@@ -364,7 +359,7 @@ Partial Class CalculMental
         '
         Me.Label27.AutoSize = True
         Me.Label27.BackColor = System.Drawing.Color.White
-        Me.Label27.Location = New System.Drawing.Point(115, 270)
+        Me.Label27.Location = New System.Drawing.Point(105, 270)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(0, 13)
         Me.Label27.TabIndex = 27
@@ -373,7 +368,7 @@ Partial Class CalculMental
         '
         Me.Label28.AutoSize = True
         Me.Label28.BackColor = System.Drawing.Color.White
-        Me.Label28.Location = New System.Drawing.Point(134, 270)
+        Me.Label28.Location = New System.Drawing.Point(132, 270)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(0, 13)
         Me.Label28.TabIndex = 28
@@ -400,7 +395,7 @@ Partial Class CalculMental
         '
         Me.Label31.AutoSize = True
         Me.Label31.BackColor = System.Drawing.Color.White
-        Me.Label31.Location = New System.Drawing.Point(96, 301)
+        Me.Label31.Location = New System.Drawing.Point(80, 301)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(0, 13)
         Me.Label31.TabIndex = 31
@@ -409,7 +404,7 @@ Partial Class CalculMental
         '
         Me.Label32.AutoSize = True
         Me.Label32.BackColor = System.Drawing.Color.White
-        Me.Label32.Location = New System.Drawing.Point(115, 301)
+        Me.Label32.Location = New System.Drawing.Point(105, 301)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(0, 13)
         Me.Label32.TabIndex = 32
@@ -418,7 +413,7 @@ Partial Class CalculMental
         '
         Me.Label33.AutoSize = True
         Me.Label33.BackColor = System.Drawing.Color.White
-        Me.Label33.Location = New System.Drawing.Point(134, 301)
+        Me.Label33.Location = New System.Drawing.Point(132, 301)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(0, 13)
         Me.Label33.TabIndex = 33
@@ -445,7 +440,7 @@ Partial Class CalculMental
         '
         Me.Label36.AutoSize = True
         Me.Label36.BackColor = System.Drawing.Color.White
-        Me.Label36.Location = New System.Drawing.Point(96, 331)
+        Me.Label36.Location = New System.Drawing.Point(80, 331)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(0, 13)
         Me.Label36.TabIndex = 36
@@ -454,7 +449,7 @@ Partial Class CalculMental
         '
         Me.Label37.AutoSize = True
         Me.Label37.BackColor = System.Drawing.Color.White
-        Me.Label37.Location = New System.Drawing.Point(115, 331)
+        Me.Label37.Location = New System.Drawing.Point(105, 331)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(0, 13)
         Me.Label37.TabIndex = 37
@@ -463,7 +458,7 @@ Partial Class CalculMental
         '
         Me.Label38.AutoSize = True
         Me.Label38.BackColor = System.Drawing.Color.White
-        Me.Label38.Location = New System.Drawing.Point(134, 331)
+        Me.Label38.Location = New System.Drawing.Point(132, 331)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(0, 13)
         Me.Label38.TabIndex = 38
@@ -490,7 +485,7 @@ Partial Class CalculMental
         '
         Me.Label41.AutoSize = True
         Me.Label41.BackColor = System.Drawing.Color.White
-        Me.Label41.Location = New System.Drawing.Point(96, 358)
+        Me.Label41.Location = New System.Drawing.Point(80, 358)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(0, 13)
         Me.Label41.TabIndex = 41
@@ -499,7 +494,7 @@ Partial Class CalculMental
         '
         Me.Label42.AutoSize = True
         Me.Label42.BackColor = System.Drawing.Color.White
-        Me.Label42.Location = New System.Drawing.Point(115, 358)
+        Me.Label42.Location = New System.Drawing.Point(105, 358)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(0, 13)
         Me.Label42.TabIndex = 42
@@ -508,7 +503,7 @@ Partial Class CalculMental
         '
         Me.Label43.AutoSize = True
         Me.Label43.BackColor = System.Drawing.Color.White
-        Me.Label43.Location = New System.Drawing.Point(134, 358)
+        Me.Label43.Location = New System.Drawing.Point(132, 358)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(0, 13)
         Me.Label43.TabIndex = 43
@@ -535,7 +530,7 @@ Partial Class CalculMental
         '
         Me.Label46.AutoSize = True
         Me.Label46.BackColor = System.Drawing.Color.White
-        Me.Label46.Location = New System.Drawing.Point(96, 388)
+        Me.Label46.Location = New System.Drawing.Point(80, 388)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(0, 13)
         Me.Label46.TabIndex = 46
@@ -544,7 +539,7 @@ Partial Class CalculMental
         '
         Me.Label47.AutoSize = True
         Me.Label47.BackColor = System.Drawing.Color.White
-        Me.Label47.Location = New System.Drawing.Point(115, 388)
+        Me.Label47.Location = New System.Drawing.Point(105, 388)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(0, 13)
         Me.Label47.TabIndex = 47
@@ -553,7 +548,7 @@ Partial Class CalculMental
         '
         Me.Label48.AutoSize = True
         Me.Label48.BackColor = System.Drawing.Color.White
-        Me.Label48.Location = New System.Drawing.Point(134, 388)
+        Me.Label48.Location = New System.Drawing.Point(132, 388)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(0, 13)
         Me.Label48.TabIndex = 48
@@ -614,7 +609,7 @@ Partial Class CalculMental
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(480, 427)
+        Me.TextBox2.Location = New System.Drawing.Point(635, 315)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 54
@@ -651,6 +646,7 @@ Partial Class CalculMental
         '
         'PictureBox7
         '
+        Me.PictureBox7.BackColor = System.Drawing.Color.White
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
         Me.PictureBox7.Location = New System.Drawing.Point(12, 64)
         Me.PictureBox7.Name = "PictureBox7"
@@ -701,6 +697,38 @@ Partial Class CalculMental
         Me.PictureBox10.TabStop = False
         Me.PictureBox10.Visible = False
         '
+        'PictureBox11
+        '
+        Me.PictureBox11.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
+        Me.PictureBox11.Location = New System.Drawing.Point(299, -66)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(202, 124)
+        Me.PictureBox11.TabIndex = 63
+        Me.PictureBox11.TabStop = False
+        Me.PictureBox11.Visible = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
+        Me.PictureBox12.Location = New System.Drawing.Point(480, 280)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(297, 203)
+        Me.PictureBox12.TabIndex = 64
+        Me.PictureBox12.TabStop = False
+        Me.PictureBox12.Visible = False
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.BackColor = System.Drawing.Color.White
+        Me.Label52.Location = New System.Drawing.Point(491, 411)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(150, 13)
+        Me.Label52.TabIndex = 65
+        Me.Label52.Text = "Temps restant : 180 secondes"
+        Me.Label52.Visible = False
+        '
         'CalculMental
         '
         Me.AllowDrop = True
@@ -709,6 +737,7 @@ Partial Class CalculMental
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(833, 567)
+        Me.Controls.Add(Me.Label52)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.Label51)
@@ -716,7 +745,6 @@ Partial Class CalculMental
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label50)
         Me.Controls.Add(Me.Label49)
@@ -773,6 +801,8 @@ Partial Class CalculMental
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox8)
+        Me.Controls.Add(Me.PictureBox11)
+        Me.Controls.Add(Me.PictureBox12)
         Me.Name = "CalculMental"
         Me.Text = "Calcul Mental"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -785,13 +815,14 @@ Partial Class CalculMental
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label1 As Label
@@ -857,4 +888,7 @@ Partial Class CalculMental
     Friend WithEvents Label51 As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents Label52 As Label
 End Class
